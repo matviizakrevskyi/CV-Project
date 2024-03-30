@@ -14,7 +14,7 @@ class DesktopWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          constraints: BoxConstraints(maxWidth: 1000),
+          constraints: BoxConstraints(maxWidth: 800),
           child: Column(
             children: [
               const SizedBox(
@@ -45,108 +45,66 @@ class DesktopWidget extends StatelessWidget {
               const SizedBox(
                 height: 24,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
-                child: Divider(
-                  thickness: 1.5,
-                  color: CustomColors.divider,
-                ),
+              Divider(
+                thickness: 1.5,
+                color: CustomColors.divider,
               ),
               //About me
-              const Padding(
-                padding: const EdgeInsets.only(left: 52, right: 52, top: 16),
-                child: AboutMeWidget(),
-              ),
+              const AboutMeWidget(),
               const SizedBox(
                 height: 32,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
-                child: Divider(
-                  thickness: 1.5,
-                  color: CustomColors.divider,
-                ),
+              Divider(
+                thickness: 1.5,
+                color: CustomColors.divider,
               ),
               //Hard Skills
-              Padding(
-                padding: const EdgeInsets.only(left: 52, right: 52, top: 16),
-                child: HardSkillsWidget(),
-              ),
+              HardSkillsWidget(),
               const SizedBox(
                 height: 32,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
-                child: Divider(
-                  thickness: 1.5,
-                  color: CustomColors.divider,
-                ),
+              Divider(
+                thickness: 1.5,
+                color: CustomColors.divider,
               ),
               //Work Experience
-              const Padding(
-                padding: EdgeInsets.only(left: 52, right: 52, top: 16),
-                child: WorkExperience(),
-              ),
+              const WorkExperience(),
               const SizedBox(
                 height: 32,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
-                child: Divider(
-                  thickness: 1.5,
-                  color: CustomColors.divider,
-                ),
+              Divider(
+                thickness: 1.5,
+                color: CustomColors.divider,
               ),
               //GitHub API
-              const Padding(
-                padding: EdgeInsets.only(left: 52, right: 52, top: 16),
-                child: GitHubApiWidget(),
-              ),
+              const GitHubApiWidget(),
               const SizedBox(
                 height: 32,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
-                child: Divider(
-                  thickness: 1.5,
-                  color: CustomColors.divider,
-                ),
+              Divider(
+                thickness: 1.5,
+                color: CustomColors.divider,
               ),
               //Flutter Messenger
-              const Padding(
-                padding: EdgeInsets.only(left: 52, right: 52, top: 16),
-                child: FlutterMessengerWidget(),
-              ),
+              const FlutterMessengerWidget(),
               const SizedBox(
                 height: 32,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
-                child: Divider(
-                  thickness: 1.5,
-                  color: CustomColors.divider,
-                ),
+              Divider(
+                thickness: 1.5,
+                color: CustomColors.divider,
               ),
               //Education
-              const Padding(
-                padding: EdgeInsets.only(left: 52, right: 52, top: 16),
-                child: EducationAndLanguagesWidget(),
-              ),
+              const EducationAndLanguagesWidget(),
               const SizedBox(
                 height: 32,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
-                child: Divider(
-                  thickness: 1.5,
-                  color: CustomColors.divider,
-                ),
+              Divider(
+                thickness: 1.5,
+                color: CustomColors.divider,
               ),
               //Contact
-              const Padding(
-                padding: EdgeInsets.only(left: 52, right: 52, top: 16),
-                child: ContactWidget(),
-              ),
+              const ContactWidget(),
               const SizedBox(
                 height: 50,
               )
