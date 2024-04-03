@@ -1,0 +1,1 @@
+enum MainScreens { main, projects }
