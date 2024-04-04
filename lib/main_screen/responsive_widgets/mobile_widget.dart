@@ -22,7 +22,6 @@ class MobileWidget extends StatelessWidget {
       children: [
         Column(
           children: [
-            Text('mobile'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
               child: SizedBox(

@@ -22,7 +22,6 @@ class TabletWidget extends StatelessWidget {
       children: [
         Column(
           children: [
-            Text('tablet'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
               child: SizedBox(
