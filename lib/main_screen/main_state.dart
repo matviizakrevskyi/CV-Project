@@ -2,8 +2,10 @@ part of 'main_cubit.dart';
 
 class MainState {
   final MainScreens screen;
+  final double animationOpacity;
 
-  MainState(this.screen);
+  MainState(this.screen, this.animationOpacity);
 
-  MainState copyWith(MainScreens? screen) => MainState(screen ?? this.screen);
+  MainState copyWith({MainScreens? screen, double? animationOpacity}) =>
+      MainState(screen ?? this.screen, animationOpacity ?? this.animationOpacity);
 }
