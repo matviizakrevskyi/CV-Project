@@ -29,8 +29,14 @@ class MainScreen extends StatelessWidget {
                   duration: Duration(milliseconds: state.animationOpacity == 0 ? 0 : 800),
                   child: Column(
                     children: [
-                      if (ResponsiveBreakpoints.of(context).isMobile) MobileWidget(),
-                      if (ResponsiveBreakpoints.of(context).isTablet) TabletWidget(),
+                      if (ResponsiveBreakpoints.of(context).isMobile)
+                        MobileWidget(
+                          screen: state.screen,
+                        ),
+                      if (ResponsiveBreakpoints.of(context).isTablet)
+                        TabletWidget(
+                          screen: state.screen,
+                        ),
                       if (ResponsiveBreakpoints.of(context).isDesktop)
                         DesktopWidget(
                           screen: state.screen,

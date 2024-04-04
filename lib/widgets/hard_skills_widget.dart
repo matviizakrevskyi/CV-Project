@@ -1,5 +1,6 @@
 import 'package:cv_project/styling.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 class HardSkillsWidget extends StatelessWidget {
   final List<String> skills = [
@@ -24,7 +25,11 @@ class HardSkillsWidget extends StatelessWidget {
           height: 8,
         ),
         SizedBox(
-          height: 120,
+          height: ResponsiveBreakpoints.of(context).isMobile
+              ? skills.length * 38
+              : ResponsiveBreakpoints.of(context).isTablet
+                  ? skills.length * 26
+                  : skills.length * 24,
           child: Expanded(
             child: ListView.builder(
                 itemCount: skills.length,
@@ -56,9 +61,11 @@ class SkillsItem extends StatelessWidget {
             color: CustomColors.textPrimaryColor,
           ),
         ),
-        Text(
-          text,
-          style: CustomTextSyles.main,
+        Expanded(
+          child: Text(
+            text,
+            style: CustomTextSyles.main,
+          ),
         ),
       ],
     );

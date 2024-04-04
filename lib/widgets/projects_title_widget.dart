@@ -1,5 +1,6 @@
 import 'package:cv_project/styling.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 class ProjectsTitleWidget extends StatelessWidget {
   @override
@@ -16,7 +17,9 @@ class ProjectsTitleWidget extends StatelessWidget {
             Text(
               "MY PROJECTS",
               overflow: TextOverflow.ellipsis,
-              style: CustomTextSyles.h3.copyWith(letterSpacing: 8),
+              style: ResponsiveBreakpoints.of(context).isMobile
+                  ? CustomTextSyles.h4.copyWith(letterSpacing: 8)
+                  : CustomTextSyles.h3.copyWith(letterSpacing: 8),
             ),
           ],
         ),
@@ -28,7 +31,9 @@ class ProjectsTitleWidget extends StatelessWidget {
           children: [
             Text(
               "for self-development",
-              style: CustomTextSyles.h4.copyWith(letterSpacing: 6),
+              style: ResponsiveBreakpoints.of(context).isMobile
+                  ? CustomTextSyles.h5.copyWith(letterSpacing: 6)
+                  : CustomTextSyles.h4.copyWith(letterSpacing: 6),
             ),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'package:cv_project/styling.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 class TitleWidget extends StatelessWidget {
   @override
@@ -12,15 +13,12 @@ class TitleWidget extends StatelessWidget {
           const SizedBox(
             height: 54,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "MATVII ZAKREVSKYI",
-                overflow: TextOverflow.ellipsis,
-                style: CustomTextSyles.h1.copyWith(letterSpacing: 8),
-              ),
-            ],
+          Text(
+            "MATVII ZAKREVSKYI",
+            textAlign: TextAlign.center,
+            style: ResponsiveBreakpoints.of(context).isMobile
+                ? CustomTextSyles.h2.copyWith(letterSpacing: 8)
+                : CustomTextSyles.h1.copyWith(letterSpacing: 8),
           ),
           const SizedBox(
             height: 32,
@@ -30,7 +28,9 @@ class TitleWidget extends StatelessWidget {
             children: [
               Text(
                 "FLUTTER DEVELOPER",
-                style: CustomTextSyles.h4.copyWith(letterSpacing: 6),
+                style: ResponsiveBreakpoints.of(context).isMobile
+                    ? CustomTextSyles.h5.copyWith(letterSpacing: 6)
+                    : CustomTextSyles.h4.copyWith(letterSpacing: 6),
               ),
             ],
           ),

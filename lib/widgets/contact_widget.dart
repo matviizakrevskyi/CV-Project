@@ -6,17 +6,17 @@ class ContactWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // Text(
+        //   "CONTACT",
+        //   style: CustomTextSyles.h5.copyWith(letterSpacing: 6),
+        // ),
+        SizedBox(
+          height: 16,
+        ),
         Text(
-          "CONTACT",
-          style: CustomTextSyles.h5.copyWith(letterSpacing: 6),
-        ),
-        const SizedBox(
-          height: 8,
-        ),
-        const Text(
           "matvii.zakrevskyi@gmail.com",
           style: CustomTextSyles.main,
         ),

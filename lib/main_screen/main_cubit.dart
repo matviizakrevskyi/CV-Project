@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 part 'main_state.dart';
 
 class MainCubit extends Cubit<MainState> {
-  MainCubit() : super(MainState(MainScreens.projects, 1));
+  MainCubit() : super(MainState(MainScreens.main, 1));
 
   onMain() {
     emit(state.copyWith(animationOpacity: 0));

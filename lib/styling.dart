@@ -8,6 +8,13 @@ abstract class CustomTextSyles {
       letterSpacing: 0,
       color: CustomColors.textPrimaryColor);
 
+  static const h2 = TextStyle(
+      fontFamily: 'Raleway',
+      fontSize: 38,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 0,
+      color: CustomColors.textPrimaryColor);
+
   static const h3 = TextStyle(
       fontFamily: 'Raleway',
       fontSize: 32,
