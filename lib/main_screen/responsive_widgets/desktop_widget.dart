@@ -4,6 +4,7 @@ import 'package:cv_project/widgets/about_me_widget.dart';
 import 'package:cv_project/widgets/contact_widget.dart';
 import 'package:cv_project/widgets/education_languages_widget.dart';
 import 'package:cv_project/widgets/hard_skills_widget.dart';
+import 'package:cv_project/widgets/projects_title_widget.dart';
 import 'package:cv_project/widgets/projects_widgets.dart';
 import 'package:cv_project/widgets/title_widget.dart';
 import 'package:cv_project/widgets/work_experience.dart';
@@ -94,6 +95,7 @@ class _DesktopProjectsScreenWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        ProjectsTitleWidget(),
         //GitHub API
         const Padding(
           padding: EdgeInsets.only(top: 16, bottom: 46),
