@@ -114,6 +114,11 @@ class _DesktopProjectsScreenWidget extends StatelessWidget {
           thickness: 1.5,
           color: CustomColors.divider,
         ),
+        //CV
+        const Padding(
+          padding: EdgeInsets.only(top: 16, bottom: 46),
+          child: CvProjectWidget(),
+        ),
       ],
     );
   }
