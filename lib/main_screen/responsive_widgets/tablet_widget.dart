@@ -1,3 +1,4 @@
+import 'package:cv_project/main_screen/main_cubit.dart';
 import 'package:cv_project/main_screen/main_screen_enum.dart';
 import 'package:cv_project/styling.dart';
 import 'package:cv_project/widgets/about_me_widget.dart';
@@ -9,6 +10,7 @@ import 'package:cv_project/widgets/projects_widgets.dart';
 import 'package:cv_project/widgets/title_widget.dart';
 import 'package:cv_project/widgets/work_experience.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TabletWidget extends StatelessWidget {
   final MainScreens screen;
@@ -67,9 +69,11 @@ class _DesktopMainScreenWidget extends StatelessWidget {
           color: CustomColors.divider,
         ),
         //Work Experience
-        const Padding(
-          padding: EdgeInsets.only(top: 16, bottom: 46),
-          child: WorkExperience(),
+        Padding(
+          padding: const EdgeInsets.only(top: 16, bottom: 46),
+          child: WorkExperience(
+            onButton: () => context.read<MainCubit>().onEleviate(),
+          ),
         ),
         Divider(
           thickness: 1.5,
@@ -101,27 +105,33 @@ class _DesktopProjectsScreenWidget extends StatelessWidget {
       children: [
         ProjectsTitleWidget(),
         //GitHub API
-        const Padding(
-          padding: EdgeInsets.only(top: 16, bottom: 46),
-          child: GitHubApiWidget(),
+        Padding(
+          padding: const EdgeInsets.only(top: 16, bottom: 46),
+          child: GitHubApiWidget(
+            onTap: () => context.read<MainCubit>().onGitHubProject(),
+          ),
         ),
         Divider(
           thickness: 1.5,
           color: CustomColors.divider,
         ),
         //Flutter Messenger
-        const Padding(
-          padding: EdgeInsets.only(top: 16, bottom: 46),
-          child: FlutterMessengerWidget(),
+        Padding(
+          padding: const EdgeInsets.only(top: 16, bottom: 46),
+          child: FlutterMessengerWidget(
+            onTap: () => context.read<MainCubit>().onMessangerProject(),
+          ),
         ),
         Divider(
           thickness: 1.5,
           color: CustomColors.divider,
         ),
         //CV
-        const Padding(
-          padding: EdgeInsets.only(top: 16, bottom: 46),
-          child: CvProjectWidget(),
+        Padding(
+          padding: const EdgeInsets.only(top: 16, bottom: 46),
+          child: CvProjectWidget(
+            onTap: () => context.read<MainCubit>().onCVProject(),
+          ),
         ),
       ],
     );

@@ -1,18 +1,22 @@
 import 'package:cv_project/styling.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class GitHubApiWidget extends StatelessWidget {
-  const GitHubApiWidget({super.key});
+  final VoidCallback onTap;
+
+  const GitHubApiWidget({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "GitHub API Project",
-          style: CustomTextSyles.h5.copyWith(letterSpacing: 2),
-        ),
+        RichText(
+            text: TextSpan(
+                text: "GitHub API Project",
+                style: CustomTextSyles.h5.copyWith(letterSpacing: 2),
+                recognizer: TapGestureRecognizer()..onTap = onTap)),
         const SizedBox(
           height: 16,
         ),
@@ -50,17 +54,20 @@ class GitHubApiWidget extends StatelessWidget {
 }
 
 class FlutterMessengerWidget extends StatelessWidget {
-  const FlutterMessengerWidget({super.key});
+  final VoidCallback onTap;
+
+  const FlutterMessengerWidget({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "Flutter Messenger",
-          style: CustomTextSyles.h5.copyWith(letterSpacing: 2),
-        ),
+        RichText(
+            text: TextSpan(
+                text: "Flutter Messanger",
+                style: CustomTextSyles.h5.copyWith(letterSpacing: 2),
+                recognizer: TapGestureRecognizer()..onTap = onTap)),
         const SizedBox(
           height: 16,
         ),
@@ -100,22 +107,25 @@ class FlutterMessengerWidget extends StatelessWidget {
 }
 
 class CvProjectWidget extends StatelessWidget {
-  const CvProjectWidget({super.key});
+  final VoidCallback onTap;
+
+  const CvProjectWidget({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "CV Project",
-          style: CustomTextSyles.h5.copyWith(letterSpacing: 2),
-        ),
+        RichText(
+            text: TextSpan(
+                text: "CV Project",
+                style: CustomTextSyles.h5.copyWith(letterSpacing: 2),
+                recognizer: TapGestureRecognizer()..onTap = onTap)),
         const SizedBox(
           height: 16,
         ),
         const Text(
-          "And also this project. I decided to write it in order to try to write a web project in Flutter. In total, this is a very simple project with only two pages. I used the Responsive Framework library in the project to make the project look good on different devices. I used the BLoC library for state management.",
+          "And also this web project. I decided to write it in order to try to write a web project in Flutter. In total, this is a very simple project with only two pages. I used the Responsive Framework library in the project to make the project look good on different devices. I used the BLoC library for state management.",
           style: CustomTextSyles.main,
         ),
         const SizedBox(
@@ -127,8 +137,7 @@ class CvProjectWidget extends StatelessWidget {
                 style: CustomTextSyles.mainBold,
                 children: [
               TextSpan(
-                  text: "Dart, Flutter, Bloc, Responsive Framework",
-                  style: CustomTextSyles.main)
+                  text: "Dart, Flutter, Bloc, Responsive Framework", style: CustomTextSyles.main)
             ])),
       ],
     );

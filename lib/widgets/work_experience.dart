@@ -2,7 +2,9 @@ import 'package:cv_project/styling.dart';
 import 'package:flutter/material.dart';
 
 class WorkExperience extends StatelessWidget {
-  const WorkExperience({super.key});
+  final VoidCallback onButton;
+
+  const WorkExperience({super.key, required this.onButton});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class WorkExperience extends StatelessWidget {
           height: 8,
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: onButton,
           child: const Text(
             "eleviate.io",
             style: CustomTextSyles.main,
