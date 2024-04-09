@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:cv_project/constants.dart';
 import 'package:cv_project/main_screen/main_screen_enum.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher_web/url_launcher_web.dart';
@@ -26,18 +27,18 @@ class MainCubit extends Cubit<MainState> {
   }
 
   onEleviate() {
-    UrlLauncherPlugin().launch("https://eleviate.io/");
+    UrlLauncherPlugin().launch(linkEleviate);
   }
 
   onGitHubProject() {
-    UrlLauncherPlugin().launch("https://github.com/matviizakrevskyi/GitHub-Api-Project");
+    UrlLauncherPlugin().launch(linkFirstProject);
   }
 
   onMessangerProject() {
-    UrlLauncherPlugin().launch("https://github.com/matviizakrevskyi/Flutter-Messenger");
+    UrlLauncherPlugin().launch(linkSecondProject);
   }
 
   onCVProject() {
-    UrlLauncherPlugin().launch("https://github.com/matviizakrevskyi/CV-Project");
+    UrlLauncherPlugin().launch(linkThirdProject);
   }
 }

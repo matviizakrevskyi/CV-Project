@@ -1,16 +1,12 @@
 import 'package:cv_project/styling.dart';
+import 'package:cv_project/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 class HardSkillsWidget extends StatelessWidget {
-  final List<String> skills = [
-    "Good knowledge in Flutter and Dart(1+ year experience)",
-    "Knowledge of Dart libraries, such as: BLoC, Dio, Hive, RXDart, Freezed, GetIt, injector",
-    "OOP, SOLID, Design patterns",
-    "Databases: SQL NoSQL",
-    "Experience with clean architecture",
-  ];
-  HardSkillsWidget({super.key});
+  final List<String> skills = hardSkills;
+
+  const HardSkillsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +14,7 @@ class HardSkillsWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "HARD SKILLS",
+          hardSkillsTitle,
           style: CustomTextSyles.h5.copyWith(letterSpacing: 6),
         ),
         const SizedBox(

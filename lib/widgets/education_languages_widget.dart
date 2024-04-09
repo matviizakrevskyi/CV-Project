@@ -1,4 +1,5 @@
 import 'package:cv_project/styling.dart';
+import 'package:cv_project/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -40,25 +41,25 @@ class EducationWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "EDUCATION",
+          educationTitle,
           style: CustomTextSyles.h5.copyWith(letterSpacing: 6),
         ),
         const SizedBox(
           height: 8,
         ),
         const Text(
-          "Bachelor of Engineering in Computer Science",
+          educationSubtitle,
           style: CustomTextSyles.h5,
         ),
         const SizedBox(
           height: 6,
         ),
         const Text(
-          "WSEI Krakow",
+          educationPlace,
           style: CustomTextSyles.mainBold,
         ),
         const Text(
-          "October 2020 - Present",
+          educationDate,
           style: CustomTextSyles.main,
         )
       ],
@@ -73,7 +74,7 @@ class LanguagesWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "LANGUAGES",
+          languagesTitle,
           style: CustomTextSyles.h5.copyWith(letterSpacing: 6),
         ),
         const SizedBox(
@@ -81,9 +82,9 @@ class LanguagesWidget extends StatelessWidget {
         ),
         RichText(
           text: const TextSpan(
-            text: "English",
+            text: languagesEnglish,
             style: CustomTextSyles.mainBold,
-            children: [TextSpan(text: " - B1", style: CustomTextSyles.main)],
+            children: [TextSpan(text: " - $languagesEnglishValue", style: CustomTextSyles.main)],
           ),
         ),
         const SizedBox(
@@ -91,9 +92,9 @@ class LanguagesWidget extends StatelessWidget {
         ),
         RichText(
           text: const TextSpan(
-            text: "Polish",
+            text: languagesPolish,
             style: CustomTextSyles.mainBold,
-            children: [TextSpan(text: " - B2", style: CustomTextSyles.main)],
+            children: [TextSpan(text: " - $languagesPolishValue", style: CustomTextSyles.main)],
           ),
         ),
         const SizedBox(
@@ -101,9 +102,9 @@ class LanguagesWidget extends StatelessWidget {
         ),
         RichText(
           text: const TextSpan(
-            text: "Ukrainian",
+            text: languagesUkrainian,
             style: CustomTextSyles.mainBold,
-            children: [TextSpan(text: " - native", style: CustomTextSyles.main)],
+            children: [TextSpan(text: " - $languagesUkrainianValue", style: CustomTextSyles.main)],
           ),
         )
       ],

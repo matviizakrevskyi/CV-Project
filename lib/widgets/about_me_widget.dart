@@ -1,4 +1,5 @@
 import 'package:cv_project/styling.dart';
+import 'package:cv_project/texts.dart';
 import 'package:flutter/material.dart';
 
 class AboutMeWidget extends StatelessWidget {
@@ -10,14 +11,14 @@ class AboutMeWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "ABOUT ME",
+          aboutMeTitle,
           style: CustomTextSyles.h5.copyWith(letterSpacing: 6),
         ),
         const SizedBox(
           height: 8,
         ),
         const Text(
-          "As an enthusiastic student hailing from Krakow, I bring forth practical experience and unwavering dedication as a Flutter developer. My motivation stems from a genuine love for Flutter, and I am eager to further develop my skills in this dynamic field.",
+          aboutMeText,
           style: CustomTextSyles.main,
         )
       ],

@@ -1,4 +1,5 @@
 import 'package:cv_project/styling.dart';
+import 'package:cv_project/texts.dart';
 import 'package:flutter/material.dart';
 
 class ContactWidget extends StatelessWidget {
@@ -17,7 +18,7 @@ class ContactWidget extends StatelessWidget {
           height: 16,
         ),
         Text(
-          "matvii.zakrevskyi@gmail.com",
+          contactEmail,
           style: CustomTextSyles.main,
         ),
       ],

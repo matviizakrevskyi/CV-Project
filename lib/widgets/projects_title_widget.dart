@@ -1,4 +1,5 @@
 import 'package:cv_project/styling.dart';
+import 'package:cv_project/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -15,7 +16,7 @@ class ProjectsTitleWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "MY PROJECTS",
+              projetcsTitle,
               overflow: TextOverflow.ellipsis,
               style: ResponsiveBreakpoints.of(context).isMobile
                   ? CustomTextSyles.h4.copyWith(letterSpacing: 8)
@@ -30,7 +31,7 @@ class ProjectsTitleWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "for self-development",
+              projetcsSubtitle,
               style: ResponsiveBreakpoints.of(context).isMobile
                   ? CustomTextSyles.h5.copyWith(letterSpacing: 6)
                   : CustomTextSyles.h4.copyWith(letterSpacing: 6),

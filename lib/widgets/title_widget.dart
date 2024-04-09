@@ -1,4 +1,5 @@
 import 'package:cv_project/styling.dart';
+import 'package:cv_project/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -14,7 +15,7 @@ class TitleWidget extends StatelessWidget {
             height: 54,
           ),
           Text(
-            "MATVII ZAKREVSKYI",
+            mainTitle,
             textAlign: TextAlign.center,
             style: ResponsiveBreakpoints.of(context).isMobile
                 ? CustomTextSyles.h2.copyWith(letterSpacing: 8)
@@ -27,7 +28,7 @@ class TitleWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "FLUTTER DEVELOPER",
+                mainSubtitle,
                 style: ResponsiveBreakpoints.of(context).isMobile
                     ? CustomTextSyles.h5.copyWith(letterSpacing: 6)
                     : CustomTextSyles.h4.copyWith(letterSpacing: 6),

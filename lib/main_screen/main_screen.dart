@@ -4,6 +4,7 @@ import 'package:cv_project/main_screen/responsive_widgets/desktop_widget.dart';
 import 'package:cv_project/main_screen/responsive_widgets/mobile_widget.dart';
 import 'package:cv_project/main_screen/responsive_widgets/tablet_widget.dart';
 import 'package:cv_project/styling.dart';
+import 'package:cv_project/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -79,7 +80,7 @@ class AppBarWidget extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.only(top: 8, bottom: 8, left: 16, right: 16),
               child: Text(
-                "Main",
+                maintxt,
                 style: CustomTextSyles.h4,
               ),
             ),
@@ -98,7 +99,7 @@ class AppBarWidget extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.only(top: 8, bottom: 8, left: 16, right: 16),
               child: Text(
-                "Projects",
+                projects,
                 style: CustomTextSyles.h4,
               ),
             ),

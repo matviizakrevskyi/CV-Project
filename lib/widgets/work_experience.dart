@@ -1,4 +1,5 @@
 import 'package:cv_project/styling.dart';
+import 'package:cv_project/texts.dart';
 import 'package:flutter/material.dart';
 
 class WorkExperience extends StatelessWidget {
@@ -12,18 +13,18 @@ class WorkExperience extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "WORK EXPERIENCE",
+          workTitle,
           style: CustomTextSyles.h5.copyWith(letterSpacing: 6),
         ),
         const SizedBox(
           height: 8,
         ),
         const Text(
-          "Junior Mobile Developer, Eleviate, Warsaw",
+          workSubtitle,
           style: CustomTextSyles.mainBold,
         ),
         Text(
-          "June 2023 - February 2024",
+          workDate,
           style: CustomTextSyles.main.copyWith(fontSize: 14),
         ),
         const SizedBox(
@@ -32,7 +33,7 @@ class WorkExperience extends StatelessWidget {
         TextButton(
           onPressed: onButton,
           child: const Text(
-            "eleviate.io",
+            workLink,
             style: CustomTextSyles.main,
           ),
         ),
@@ -40,37 +41,26 @@ class WorkExperience extends StatelessWidget {
           height: 8,
         ),
         RichText(
-            text: const TextSpan(text: "Eleviate", style: CustomTextSyles.mainBold, children: [
-          TextSpan(
-              text:
-                  " is a fitness app where users can create fitness plans or use ready-made ones for sports. The project also has a Mindfulness part with great meditations.",
-              style: CustomTextSyles.main)
-        ])),
+            text: const TextSpan(
+                text: workTextPartOne,
+                style: CustomTextSyles.mainBold,
+                children: [TextSpan(text: workTextPartTwo, style: CustomTextSyles.main)])),
         const SizedBox(
           height: 6,
         ),
         RichText(
             text: const TextSpan(
-                text: "Responsibilities on the project:",
+                text: "$workResponsibilitiesTitle: ",
                 style: CustomTextSyles.mainBold,
-                children: [
-              TextSpan(
-                  text: " creating new features, improving existing ones and fixing bugs.",
-                  style: CustomTextSyles.main)
-            ])),
+                children: [TextSpan(text: workResponsibilities, style: CustomTextSyles.main)])),
         const SizedBox(
           height: 6,
         ),
         RichText(
             text: const TextSpan(
-                text: "Tools and Technologies:",
+                text: "$projectsTools: ",
                 style: CustomTextSyles.mainBold,
-                children: [
-              TextSpan(
-                  text:
-                      " Dart, Flutter, Bloc, Freezed, Dio, Git, VS Code, Android Studio,  SQL and NoSQL, GetIt with Injector, Shared Preferences, GraphQL, Jira",
-                  style: CustomTextSyles.main)
-            ])),
+                children: [TextSpan(text: workTools, style: CustomTextSyles.main)])),
       ],
     );
   }
