@@ -1,7 +1,6 @@
 import 'package:cv_project/styling.dart';
 import 'package:cv_project/texts.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
 class HardSkillsWidget extends StatelessWidget {
   final List<String> skills = hardSkills;
@@ -20,21 +19,26 @@ class HardSkillsWidget extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        SizedBox(
-          height: ResponsiveBreakpoints.of(context).isMobile
-              ? skills.length * 38
-              : ResponsiveBreakpoints.of(context).isTablet
-                  ? skills.length * 26
-                  : skills.length * 24,
-          child: Expanded(
-            child: ListView.builder(
-                itemCount: skills.length,
-                itemBuilder: (context, index) {
-                  final item = skills[index];
-                  return SkillsItem(text: item);
-                }),
-          ),
-        )
+        // SizedBox(
+        //   height: ResponsiveBreakpoints.of(context).isMobile
+        //       ? skills.length * 38
+        //       : ResponsiveBreakpoints.of(context).isTablet
+        //           ? skills.length * 26
+        //           : skills.length * 24,
+        //   child: Expanded(
+        //     child: ListView.builder(
+        //         itemCount: skills.length,
+        //         itemBuilder: (context, index) {
+        //           final item = skills[index];
+        //           return SkillsItem(text: item);
+        //         }),
+        //   ),
+        // )
+        SkillsItem(text: skills[0]),
+        SkillsItem(text: skills[1]),
+        SkillsItem(text: skills[2]),
+        SkillsItem(text: skills[3]),
+        SkillsItem(text: skills[4]),
       ],
     );
   }
